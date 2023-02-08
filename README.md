@@ -96,10 +96,13 @@ At any point during their turn, a player can purchase one basic building bluepri
 The game is prroudly presented to you by the members of teams *Irrelephant* & *Devoted Pineapple*.
 
 **Eugene *'marengo_hue'* Rebedailo**
+
 Game design, Layout
 
 **Karina *'Hel'* Sterzel**
+
 Creative Writing, Playtesting
 
 **Ørjan *'Jasker'* Polden**
+
 Artwork, Layout, Playtesting
