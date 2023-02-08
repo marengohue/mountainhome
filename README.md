@@ -1,60 +1,105 @@
-# Overview
-This document is meant as a game design documentation for Bergen Game Jam 2023.
-This will contain overview and high level ideas of the board game we are making.
+# Mountainhome
+*Welcome, bearded traveller!*
 
-# Team
-- Eugene 'marengo_hue' Rebedailo
-- Ørjan 'Jasker' Polden
+*Let me tell you the tale of the weary wandering dwarves, roaming the land to find the perfect place to put their roots down. Are you the dwarven leader to unite them all? Leave your pickaxe by the chest, sit down by the crackling fire and get a mug of our own foamy ale. Revel at the treasures we have amassed.*
 
-# Theme
-Theme of the jam is "ROOTS" - be it in literal sense (as in roots of the tree), metaphorical sense (as it 'I got no roots') or philosophical sense.
+*We want you here in our community, a place we one day strive to call the Mountainhome.*
 
-# Ideas
-## Project Mountainhome (WIP Name)
-The overall concept of the game is a deckbuilder in which you are playing a dwarven chieftain. Your goal is to unite the roaming dwarven tribes under your banner and make them settle down in your city, allowing them to obtain 'ROOTS'.
+## Setting up the game
+Setting up the game requires setting up a deck for every player and a common exploration deck and the Mountain Goat Co. building office.
 
+In order to set up the construction office, collect all of the basic building cards into a deck and shuffle it. Place three cards face up next to the construction office.
 
-The game is played in a series of turns in which players get to do the following:
-- In the initial phase of the turn, players get to play cards from their hand. They draw a certain amount (TBD) cards from their deck and build up their town to produce resources, mine for new resources and refine items into higher-tier items. They also get to play special ```event``` cards that allow them to interact with other players and the world.
+Then, each player draws their starting deck and shuffles it. The deck contains 
+- one of eight legendary dwarfs of their choice;
+- nine resource cards: I, II, III of shinies, booze and rocks;
+- Clan Hall Unique building blueprint;
+- one dwarf labourer card,
 
-- In the end of their turn, players get to ```explore```. Exploration is an action that allows the current player to draw the topmost card of the exploration deck, either obtaining new event event cards, unique resources or building blueprints which they could later draw and play from their hand.
+Total starting deck should contain **12** cards. Players shuffle the deck and place it face down on the table - this is their draw pile.
 
-### Exploration mechanic
-The primary goal of the game is to unite the dwarves. As such, sometimes during exploration, a dwarf will reveal themselves at the top of the exploration deck. If this were to happen, players can draw a certain extra amount of cards and commit some of them to ```Bribe``` the dwarf to join their side. Players commit any amount of cards they want to the bribery, and they do so in secret (face down), meaning that other players can see the amount of cards but not their contents. Then all players reveal their commited cards and the player who had commited the most ```Shinies``` and ```Booze``` wins the dwarf over, allowing them to add the dwarf to their deck. Then the committed cards get permanently discarded from their decks. Sometimes, players might want to use this mechanic to get rid of the junk from their decks and other times they might want to genuinely win the dwarf.
+Exploration deck consists of resources, events, building blueprints and dwarves:
+- collect a copy of II, III and IV of shinies, booze and rocks for every player in the game;
+- pick 2X + 2 random dwarves, where X is the amount of players. For example, for a 3 player game there should be 8 dwarves picked at random;
+- pick 4X random events and 2X random recurring events, where X is the amount of players;
+- all of the unique random building blueprints, where X is the amount of players.
 
-### Dwarves
-Dwarves are needed to win the game, hovewer some dwarves also provide unique bonuses. There could be dwarves that are better at doing certain activities in town, like brewing booze or mining shinies, there are good builder dwarves and so on. This mechanic could be expanded upon.
+Shuffle the exploration deck and place it in the middle of the table. Each player draws **6** cards from their draw pile.
 
-### Win condition
-The player with the most dwarves wins the game at the end of the exploration deck. That means that when all of the dwarves have been found, the player with the most dwarves in town is declared the king of the Mountainhome. Their quest in bringing stability and prosperity to the realm is over. Everyone else gets to call them 'My Liege' util the end of the day.
+The game is ready to begin.
 
-## Project ```root@jam $``` (WIP name but pretty cool)
-The game is a competitive (or collaborative) hacking card game. There are several permutations of the idea.
+## Turn order
+Players play in turns, starting from the player agreed upon and going clockwise. Player turn consists of several steps:
+- Action step
+- Exploration step
+- Prepare for next turn
 
-### Overall setup
-The server is represented as a random stack of cards with various obstacles. They might include stuff like "firewalls", "encryption" and "antiviruses". Every individual obstacle has associated attack vectors and vulnurabilities that hackers get to exploit during their turn.
+### Action step
+During a player’s action step they get to do any amount of the following actions:
+- play their dwarf’s special effects to interact with any of the decks, other players or gain additional resources or play their dwarf to commit them to a construction job if they can pay the resource cost
+- play any event cards from their hand, paying any cost with the resources at hand
+Place blueprints into their town for later construction
+Use their buildings to acquire additional resources to pay for construction or event cards or purchasing
+Purchase a building blueprint from the Mountain Goat Building Co. (once per turn)
 
-Hackers have a hand of cards and a common deck from which they get to:
-- Draw 1
-- Scry 3
+Once the players have exhausted their potential actions or don’t wish to play more of them, they move onto the exploration phase.
 
-Then they get to play a single (or maybe multiple) attacks from their hand to weaken the server's defences.
-When a layer of the server defence has been overcome, it is discarded and the next card in the stack is revealed.
-The first player to reach the bottom the pile and obtain ```root``` access - wins the game.
+#### Out of turn effects
+Some effects could be played out of turn order. Anything involving exhausting a card for resource gain can be played out of turn or during bids at any time to be added to the bid value.
 
-### Formats
-#### I - Single server race.
-The first to hack the machine wins the game and gets the l33tHaxor status.
+### Exploration step
+During the exploration phase players draw and resolve the top card of the exploration deck:
+If it is a resource, building blueprint or an event card, they put it into their discard pile. They get to draw it later to play it.
+- if it is an immediate or a recurring event, they read it out loud and the table get to resolve it. Immediate events get shuffled back into the exploration pile at the end;
+- if it is a dwarf, they reveal it and all players begin to bid **shinies and booze** for that dwarf. Winner of the bid gets to add the dwarf to their deck;
+- if it is any other card, they add it to their deck.
 
-#### II - Players attacking each other.
-Each player has their own server and attacks the opponent's server. You could both attack the opponent and defend your own server.
-The first player to reach root of the opponent's server wins the game.
+### Prepare for next turn
+Player discards their hand and turns up-right all of their exhausted buildings, then they draw their new hand. The player draws a new set of **6** cards from their draw pile. If there are not enough cards in the draw pile, players draw however many cards are left in it, shuffle their discard pile and place it in place of a draw pile, then draw the remaining cards. This ensures that players are constantly cycling through their decks as they play.
 
-#### III - Collaboartive hacking.
-X players are trying to hack the server and defend their own server against the "AI" deck, who is playing X+1 actions at a time. If they manage to reach the root first, they win the game. If their server is breached - they lose the game.
+This cycling of the deck happens at any time players would need to draw a card and there are not enough cards in the draw pile. This includes dwarf effects, bonus draw from bidding and all other situations where players draw cards.
 
-#### --- More formats and ideas to come ---
+After the final step, the next player gets to do their turn. If for some reason players had to discard more cards from their hand, they don’t draw new cards until the end of their next turn.
 
-### Attacks and obstacles
-TBD, the idea could be that various attacks and obstacles interact in a Rock-Paper-Scissors game with some potential attacks allowing to either take over many types of defences or perform special actions like taking extra turns or drawing more cards.
+## Winning the game
+The game is concluded after more than half of the dwarves have been found and added to players’ decks. All the victory points (VPs) are tallied up and the player who has the most VPs is declared the winner. If there is a tie in the amount of VPs, the game continues until one of the players gets ahead of another by obtaining victory points through any means (constructing a building granting VPs or getting another dwarf into their deck).
 
+## Mechanics and keywords
+Following is the explanation of common keywords and gameplay mechanics mentioned in the rulebook and on the cards.
+### Bidding
+Whenever a dwarf has been revealed or any event card has players bid for something, the bidding game is played. The game is executed in following steps:
+- every player draws 2 extra cards to whatever amount they currently have, ignoring their hand size limit;
+- players commit any amount of cards onto the table face down in secret. This could be any card, including non-resource or dwarf cards. Players can choose to not lay out any cards onto the table or take back their bid at any time before the cards have been revealed;
+- when the players have laid out their cards, they declare that they are ready to reveal;
+- after this point it is not possible to go back. The cards must stay on the table and players reveal them one by one, resolving any potential effects written on them.
+- the player with the most designated value in all their committed cards wins the bid and all other players lose the bid. In some situations the game asks to pick the worst loser - that means picking the player who bid the least value;
+- after the bidding is over, every player must trash exactly one of the cards they committed. It is not possible to trash dwarves this way;
+- if bidding was initiated as a result of an event card, continue resolving the event after the bidding is done.
+
+### Tie Breakers
+When a bid would result in a tie, the winner of the bid is the player who had trashed the most valuable card for a given situation. In a rare event that people trash the same value of the card, they get to trash an additional card. The process happens until the tie is resolved. Certain buildings and events can also automatically resolve ties, such as in the event where a player owns a special building or an event that would do so.
+
+### Construction
+In order to construct a building in their town, a player has to play a blueprint from their hand. The blueprint is placed on a table in an exhausted state. Unfinished buildings do not turn upright during the owner’s ready-up step. Commit a dwarf to a construction job and pay the step’s construction cost. When the last step of construction is completed, the building can now be used to trigger its abilities during the player’s turn.
+
+### Adding, discarding and trashing cards
+Unless explicitly stated on the card, whenever players are required to get new cards through events, exploration or buying, cards are added into their discard pile so that they can only enter play upon a reshuffle of the discard pile.
+
+Discarding refers to placing a card into the discard pile. This will allow it to be used again after a cycle of draws and reshuffles.
+
+Trashing refers to placing a card into a common trash area outside of play - this results in a card being out of the game. Cards can only be interacted in there through special events and other mechanics.
+
+### Mountain Goat Building Co.
+At any point during their turn, a player can purchase one basic building blueprint from the Mountain Goats Building Co. shop. For this, a player has to pay a total of 3 shinies and place the blueprint into their discard pile. Then they draw the top card off the blueprint deck and put it in place of the purchased card.
+
+## Credits
+The game is prroudly presented to you by the members of teams *Irrelephant* & *Devoted Pineapple*.
+
+**Eugene *'marengo_hue'* Rebedailo**
+Game design, Layout
+
+**Karina *'Hel'* Sterzel**
+Creative Writing, Playtesting
+
+**Ørjan *'Jasker'* Polden**
+Artwork, Layout, Playtesting
