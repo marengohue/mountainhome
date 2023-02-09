@@ -22,7 +22,7 @@ Exploration deck consists of resources, events, building blueprints and dwarves:
 - collect a copy of II, III and IV of shinies, booze and rocks for every player in the game;
 - pick 2X + 2 random dwarves, where X is the amount of players. For example, for a 3 player game there should be 8 dwarves picked at random;
 - pick 4X random events and 2X random recurring events, where X is the amount of players;
-- all of the unique random building blueprints, where X is the amount of players.
+- all of the unique random building blueprints.
 
 Shuffle the exploration deck and place it in the middle of the table. Each player draws **6** cards from their draw pile.
 
