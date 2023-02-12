@@ -38,14 +38,14 @@ Players play in turns, starting from the player agreed upon and going clockwise.
 During a player’s action step they get to do any amount of the following actions:
 - play their dwarf’s special effects to interact with any of the decks, other players or gain additional resources or play their dwarf to commit them to a construction job if they can pay the resource cost
 - play any event cards from their hand, paying any cost with the resources at hand
-Place blueprints into their town for later construction
-Use their buildings to acquire additional resources to pay for construction or event cards or purchasing
-Purchase a building blueprint from the Mountain Goat Building Co. (once per turn)
+- place blueprints into their town for later construction
+- use their buildings to acquire additional resources to pay for construction or event cards or purchasing
+- purchase a building blueprint from the Mountain Goat Building Co. (once per turn)
 
 Once the players have exhausted their potential actions or don’t wish to play more of them, they move onto the exploration phase.
 
 #### Out of turn effects
-Some effects could be played out of turn order. Anything involving exhausting a card for resource gain can be played out of turn or during bids at any time to be added to the bid value.
+Some effects could be played out of turn order. Anything involving exhausting a card for resource gain can be played out of turn or during bids (but before the cards have been revealed) to be added to the bid value.
 
 ### Exploration step
 During the exploration phase players draw and resolve the top card of the exploration deck:
@@ -80,7 +80,7 @@ Whenever a dwarf has been revealed or any event card has players bid for somethi
 When a bid would result in a tie, the winner of the bid is the player who had trashed the most valuable card for a given situation. In a rare event that people trash the same value of the card, they get to trash an additional card. The process happens until the tie is resolved. Certain buildings and events can also automatically resolve ties, such as in the event where a player owns a special building or an event that would do so.
 
 ### Construction
-In order to construct a building in their town, a player has to play a blueprint from their hand. The blueprint is placed on a table in an exhausted state. Unfinished buildings do not turn upright during the owner’s ready-up step. Commit a dwarf to a construction job and pay the step’s construction cost. When the last step of construction is completed, the building can now be used to trigger its abilities during the player’s turn.
+In order to construct a building in their town, a player has to play a blueprint from their hand. The blueprint is placed on a table in an exhausted state. Unfinished buildings do not turn upright during the owner’s ready-up step. Commit a dwarf to a construction job and pay the step’s construction cost. When the last step of construction is completed, the building is turned up-right right away and can now be used to trigger its abilities during the player’s turn.
 
 ### Adding, discarding and trashing cards
 Unless explicitly stated on the card, whenever players are required to get new cards through events, exploration or buying, cards are added into their discard pile so that they can only enter play upon a reshuffle of the discard pile.
