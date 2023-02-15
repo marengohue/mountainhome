@@ -8,7 +8,12 @@
 ## Setting up the game
 Setting up the game requires setting up a deck for every player and a common exploration deck and the Mountain Goat Co. building office.
 
-In order to set up the construction office, collect all of the basic building cards into a deck and shuffle it. Place three cards face up next to the construction office.
+In order to set up the construction office for X players,
+- Collect all of the unique project cards and place it on the table.
+- Collect X copies of each advanced building card, shuffle and place them on top of the projects pile.
+- Collect X copies of each basic building card, shuffle and place them on top of the advanced buildings pile.
+
+Then place top 3 cards of the resulting pile face up next to it. The construciton office is ready.
 
 Then, each player draws their starting deck and shuffles it. The deck contains 
 - one of eight legendary dwarfs of their choice;
