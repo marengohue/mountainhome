@@ -1,0 +1,1 @@
+export type LayoutType = "event" | "dwarf" | "building" | "resource";
