@@ -6,7 +6,7 @@
         "title": "Mossy Rocks",
         "type": "Treasure - Rocks",
         "artUri": "/art/rocks-1.png",
-        "layout": "bigArt",
+        "layout": "extendedArt",
         "rarity": "normal",
         "flavourText": "I met a friendly mermaid Dasha who traded me some mossy wet rocks - Ewww.\n- Corn The Barbarian",
         "value": {
@@ -22,11 +22,15 @@
         "layout": "normal",
         "rarity": "normal",
         "mainText": "Place the dwarf fortress blueprint next to the exploration pile - anyone can construct it and it belongs to no one. If you explore to find a dwarf, you may place them in the fortress. If the fortress is exhausted, the dwarf flees back into the exploration pile.",
-        "flavourText": "Some dwarves are just too powerful to be allowed to roam the lands of Rotheim. Thankfully, exile in a lavish fort is not such a terrible fate.W",
+        "flavourText": "Some dwarves are just too powerful to be allowed to roam the lands of Rotheim. Thankfully, exile in a lavish fort is not such a terrible fate.",
         "value": {
             "resource": "vp",
             "value": 4
-        }
+        },
+        "cost": [
+            [ { "resource": "rock", "value": 3 }, { "resource": "booze", "value": 2 } ],
+            [ { "resource": "rockc", "value": 3 }, { "resource": "shinies", "value": 2 } ]
+        ]
     };
 
     
@@ -38,8 +42,8 @@
         "rarity": "normal",
         "flavourText": "Some dwarves are just too powerful to be allowed to roam the lands of Rotheim. Thankfully, exile in a lavish fort is not such a terrible fate.",
         "value": {
-            "resource": "vp",
-            "value": 4
+            "resource": "shinies",
+            "value": 12
         }
     };
 
@@ -51,7 +55,7 @@
         "rarity": "normal",
         "mainText": "Some dwarves are just too powerful to be allowed to roam the lands of Rotheim. Thankfully, exile in a lavish fort is not such a terrible fate.",
         "value": {
-            "resource": "vp",
+            "resource": "booze",
             "value": 4
         }
     };

@@ -1,4 +1,4 @@
-import type { IValue } from "./IValue";
+import type { IValue } from "./Value";
 import type { LayoutType } from "./LayoutType";
 import type { Rarity } from "./Rarity";
 
@@ -10,5 +10,6 @@ export interface ICard {
     layout: LayoutType,
     rarity: Rarity,
     flavourText?: string
-    value: IValue
+    value: IValue,
+    cost?: IValue[]
 }

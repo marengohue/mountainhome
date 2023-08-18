@@ -1,6 +1,10 @@
 <script lang="ts">
     import type { ICard } from "../../types/ICard";
+    import { hasValue } from "../../types/Value";
+    import { hasCost } from "../../types/Cost";
 
+    import CostTrack from "../blocks/CostTrack.svelte";
+    import ValueBox from "../blocks/ValueBox.svelte";
     import CardTitle from "../blocks/CardTitle.svelte";
     import TextBox from "../blocks/TextBox.svelte";
     import Art from "../blocks/Art.svelte";
@@ -8,7 +12,15 @@
     export let cardDefinition: ICard;
 </script>
 
-<Art uri={cardDefinition.artUri} style="normal"/>
+{#if hasValue(cardDefinition)}
+    <ValueBox value={cardDefinition.value} />
+{/if}
+
+{#if hasCost(cardDefinition)}
+    <CostTrack cost={cardDefinition.cost} />
+{/if}
+
+<Art uri={cardDefinition.artUri} />
 <CardTitle
     title={cardDefinition.title}
     rarity={cardDefinition.rarity}

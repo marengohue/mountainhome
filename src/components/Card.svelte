@@ -1,6 +1,6 @@
 <script lang="ts">
     import type { ICard } from "../types/ICard";
-    import BigArt from "./layouts/BigArt.svelte";
+    import ExtendedArt from "./layouts/ExtendedArt.svelte";
     import Normal from "./layouts/Normal.svelte";
 
     export let cardDefinition: ICard;
@@ -8,8 +8,8 @@
 
 <div class="card">
     <div class="inner">
-        {#if cardDefinition.layout === "bigArt"}
-            <BigArt cardDefinition={cardDefinition}/>
+        {#if cardDefinition.layout === "extendedArt"}
+            <ExtendedArt cardDefinition={cardDefinition}/>
         {:else if cardDefinition.layout == "normal"}
             <Normal cardDefinition={cardDefinition}/>
         {/if}
