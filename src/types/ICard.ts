@@ -1,6 +1,6 @@
-import type {IValue} from "./IValue";
-import type {LayoutType} from "./LayoutType";
-import type {Rarity} from "./Rarity";
+import type { IValue } from "./IValue";
+import type { LayoutType } from "./LayoutType";
+import type { Rarity } from "./Rarity";
 
 export interface ICard {
     title: string,
@@ -9,6 +9,6 @@ export interface ICard {
     type: string,
     layout: LayoutType,
     rarity: Rarity,
-    flavourText: string
+    flavourText?: string
     value: IValue
 }

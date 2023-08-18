@@ -1,1 +1,1 @@
-export type LayoutType = "event" | "dwarf" | "building" | "resource";
+export type LayoutType = "event" | "normal" | "bigArt";

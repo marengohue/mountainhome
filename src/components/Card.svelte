@@ -1,16 +1,17 @@
 <script lang="ts">
-    import Resource from "./layouts/Resource.svelte"
-    import Building from "./layouts/Building.svelte"
+    import type { ICard } from "../types/ICard";
+    import BigArt from "./layouts/BigArt.svelte";
+    import Normal from "./layouts/Normal.svelte";
 
     export let cardDefinition: ICard;
 </script>
 
 <div class="card">
     <div class="inner">
-        {#if cardDefinition.layout === "resource"}
-            <Resource cardDefinition={cardDefinition}/>
-        {:else if cardDefinition.layout == "building"}
-            <Building cardDefinition={cardDefinition}/>
+        {#if cardDefinition.layout === "bigArt"}
+            <BigArt cardDefinition={cardDefinition}/>
+        {:else if cardDefinition.layout == "normal"}
+            <Normal cardDefinition={cardDefinition}/>
         {/if}
     </div>
 </div>
@@ -30,10 +31,16 @@
         padding: 10px;
         position: relative;
         height: calc(100% - 20px);
-        background: url('/art/normal-bg.png');
-        background-repeat: round;
+        background: linear-gradient(
+            to top,
+            rgba(164, 176, 190, 0.5),
+            rgba(164, 176, 190, 0.3)),
+            url('/art/normal-bg.png'
+        ) no-repeat top center;
+        background-size:  cover;
         border-radius: 15px;
+        display: flex;
+        flex-direction: column;
     }
-
 
 </style>

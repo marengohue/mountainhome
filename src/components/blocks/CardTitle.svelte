@@ -21,7 +21,13 @@
     }
     
     .box {
-        background: rgba(30.0, 30.0, 30.0, 0.15);
+        background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.0) 0%,
+            rgba(0, 0, 0, 0.06) 44.06%,
+            rgba(0, 0, 0, 0.30) 99.99%,
+            rgba(0, 0, 0, 0.00) 100%
+        ),rgba(223, 228, 234, 0.60);
         border: 1px solid black;
         border-radius: 15px;
         padding: 0 15px;
