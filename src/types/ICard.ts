@@ -3,11 +3,12 @@ import type {LayoutType} from "./LayoutType";
 import type {Rarity} from "./Rarity";
 
 export interface ICard {
-    name: string,
+    title: string,
     mainText?: string;
+    artUri: string;
     type: string,
     layout: LayoutType,
     rarity: Rarity,
     flavourText: string
-    "value": IValue
+    value: IValue
 }
