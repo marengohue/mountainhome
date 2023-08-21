@@ -1,6 +1,7 @@
 <script lang="ts">
     import type { ICard } from "../types/ICard.ts";
     import Card from "../components/Card.svelte"
+    import Value from "../components/blocks/Value.svelte";
 
     const rocks: ICard = {
         "title": "Mossy Rocks",
@@ -29,7 +30,7 @@
         },
         "cost": [
             [ { "resource": "rock", "value": 3 }, { "resource": "booze", "value": 2 } ],
-            [ { "resource": "rockc", "value": 3 }, { "resource": "shinies", "value": 2 } ]
+            [ { "resource": "rock", "value": 3 }, { "resource": "shinies", "value": 2 } ]
         ]
     };
 
@@ -60,6 +61,15 @@
         }
     };
 </script>
+
+<div style="height: 100px;">
+    <Value value={{ "resource": "booze", "value": 12 }} style="small"/>
+</div>
+
+<div style="height: 100px;">
+    <Value value={{ "resource": "booze", "value": 12 }} style="big"/>
+</div>
+
 
 <Card cardDefinition={rocks} />
 <Card cardDefinition={dwarfFortress} />

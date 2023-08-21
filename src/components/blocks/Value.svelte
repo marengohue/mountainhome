@@ -3,6 +3,16 @@
     export let value: IValue;
     export let style: "big" | "small" = "small";
 
+    const size =
+        style == "big"
+            ? { "w": 40, "h": 40 }
+            : { "w": 22, "h": 22 };
+            
+    const iconSize =
+        style == "big"
+            ? { "w": 27, "h": 40 }
+            : { "w": 22, "h": 22 };
+
     const iconLookup = {
         "vp": "/icons/vp.png",
         "shinies": "/icons/shinies.png",
@@ -15,9 +25,10 @@
         const result = iconLookup[value.resource];
         return result || "/icons/unknown.png";
     }
+
 </script>
 
-<div class="box" style="--size: {style === 'big' ? 30 : 17}px">
+<div class="box" style="--size: {style === 'big' ? 30 : 17}px; --icon-size:">
     <div class="icon" style="--icon: url('{getIcon(value)}')"/>
     <span class="value">{value.value}</span>
 </div>

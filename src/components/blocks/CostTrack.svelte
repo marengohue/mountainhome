@@ -1,6 +1,6 @@
 <script lang="ts">
     import type { Cost } from "../../types/Cost";
-    import CostBlock from "./CostBlock.svelte";
+    import CostBlock from "./cost/CostBlock.svelte";
 
     export let cost: Cost;
 </script>
