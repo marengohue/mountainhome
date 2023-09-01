@@ -5,7 +5,7 @@
 </script>
 
 <div class="box">
-    <Value value={value} style="big" />
+    <Value value={value} style="large" />
 </div>
 
 <style>

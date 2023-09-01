@@ -1,7 +1,5 @@
 <script lang="ts">
     import type { ICard } from "../../types/ICard";
-    import { hasValue } from "../../types/Value";
-    import { hasCost } from "../../types/Cost";
 
     import CostTrack from "../blocks/CostTrack.svelte";
     import ValueBox from "../blocks/ValueBox.svelte";
@@ -12,11 +10,11 @@
     export let cardDefinition: ICard;
 </script>
 
-{#if hasValue(cardDefinition)}
+{#if cardDefinition.value !== undefined}
     <ValueBox value={cardDefinition.value} />
 {/if}
 
-{#if hasCost(cardDefinition)}
+{#if cardDefinition.cost !== undefined}
     <CostTrack cost={cardDefinition.cost} />
 {/if}
 

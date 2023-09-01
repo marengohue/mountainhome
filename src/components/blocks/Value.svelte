@@ -1,17 +1,7 @@
 <script lang="ts">
     import type { IValue } from "../../types/Value.ts";
     export let value: IValue;
-    export let style: "big" | "small" = "small";
-
-    const size =
-        style == "big"
-            ? { "w": 40, "h": 40 }
-            : { "w": 22, "h": 22 };
-            
-    const iconSize =
-        style == "big"
-            ? { "w": 27, "h": 40 }
-            : { "w": 22, "h": 22 };
+    export let style: "large" | "small" = "small";
 
     const iconLookup = {
         "vp": "/icons/vp.png",
@@ -26,23 +16,39 @@
         return result || "/icons/unknown.png";
     }
 
+    function getBoxSize() : number {
+        return style === "large"
+            ? 42
+            : 22;
+    }
+
+    function getIconSize() : number {
+        return style === "large"
+            ? 30
+            : 16;
+    }
+
 </script>
 
-<div class="box" style="--size: {style === 'big' ? 30 : 17}px; --icon-size:">
+<div class="box" style="--box-size: {getBoxSize()}px; --icon-size: {getIconSize()}px">
     <div class="icon" style="--icon: url('{getIcon(value)}')"/>
-    <span class="value">{value.value}</span>
+    <span class="value" style="--top: {style == "large" ? 0 : -4}px; --right: {style == "large" ? 4 : 0}px;">{value.value}</span>
 </div>
 
 <style lang="css">
     .box {
         position: relative;
+        width: var(--box-size);
+        height: var(--box-size);
+        display: inline-block;
     }
     .icon {
         position: relative;
-        left: 5px;
-        top: 8px;
-        width: var(--size);
-        height: var(--size);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: var(--icon-size);
+        height: var(--icon-size);
         display: inline-block;
         background: var(--icon) no-repeat center;
         background-size: contain;
@@ -53,7 +59,7 @@
         font-size: 14px;
         font-weight: 700;
         position: absolute;
-        top: 3px;
-        right: 4px;
+        right: var(--right);
+        top: var(--top);
     }
 </style>

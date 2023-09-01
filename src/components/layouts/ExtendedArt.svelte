@@ -1,6 +1,5 @@
 <script lang="ts">
-    import { hasValue } from "../../types/Value";
-    import { hasCost } from "../../types/Cost";
+    import type { ICard } from "../../types/ICard";
 
     import Art from "../blocks/Art.svelte";
     import CostTrack from "../blocks/CostTrack.svelte";
@@ -11,11 +10,11 @@
     export let cardDefinition: ICard;
 </script>
 
-{#if hasValue(cardDefinition)}
+{#if cardDefinition.value !== undefined}
     <ValueBox value={cardDefinition.value} />
 {/if}
 
-{#if hasCost(cardDefinition)}
+{#if cardDefinition.cost !== undefined}
     <CostTrack cost={cardDefinition.cost} />
 {/if}
 
@@ -29,24 +28,3 @@
     flavourText={cardDefinition.flavourText}
     cardType={cardDefinition.type}
 />
-
-<style lang="css">
-    .flavour {
-        height: 104px;
-        font-size: 12px;
-        font-family: 'Farsan';
-        text-align: center;
-        position: relative;
-    }
-    
-    .flavour .text {
-        margin: 0;
-        width: 70%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    
-
-</style>

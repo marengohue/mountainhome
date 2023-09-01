@@ -1,10 +1,4 @@
-import type { ICard } from "./ICard";
-
 export interface IValue {
-    resource: "rock" | "shinies" | "booze" | "vp"
+    resource: "rock" | "shinies" | "booze" | "vp" | "mixed";
     value: number
-}
-
-export function hasValue(card: ICard) {
-    return card.value !== undefined;
 }

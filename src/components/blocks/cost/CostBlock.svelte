@@ -20,10 +20,12 @@
             {@html End}
         {/if}
     </div>
-    <div class="block-foreground">
+    <div class="block-foreground {type}">
+        <div class="foreground-padding"/>
         {#each costBlock as element}
-        <Value value={element} style="small" />
-    {/each}
+            <Value value={element} style="small" />
+        {/each}
+        <div class="foreground-padding"/>
     </div>
 </div>
 
@@ -45,7 +47,23 @@
 
     .block-foreground {
         position: absolute;
-        width: calc(100% + 10px);
+        width: calc(100% - 8px);
+        height: 100%;
+        display: flex;
+        top: 2px;
+    }
+
+    .block-foreground.link {
+        width: 100%;
+    }
+
+    .block-foreground.end {
+        left: 4px;
+        width: calc(100% - 8px);
+    }
+
+    .block-foreground>.foreground-padding {
+        flex-grow: 1;
     }
     
 </style>

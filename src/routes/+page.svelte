@@ -30,6 +30,7 @@
         },
         "cost": [
             [ { "resource": "rock", "value": 3 }, { "resource": "booze", "value": 2 } ],
+            [ { "resource": "mixed", "value": 3 }, { "resource": "vp", "value": 2 } ],
             [ { "resource": "rock", "value": 3 }, { "resource": "shinies", "value": 2 } ]
         ]
     };
@@ -61,15 +62,6 @@
         }
     };
 </script>
-
-<div style="height: 100px;">
-    <Value value={{ "resource": "booze", "value": 12 }} style="small"/>
-</div>
-
-<div style="height: 100px;">
-    <Value value={{ "resource": "booze", "value": 12 }} style="big"/>
-</div>
-
 
 <Card cardDefinition={rocks} />
 <Card cardDefinition={dwarfFortress} />

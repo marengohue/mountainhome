@@ -39,6 +39,7 @@
         background: rgba(0, 0, 0, 0.03);
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
+        box-shadow: inset 0 0 5px 5px rgba(0, 0, 0, 0.2);
     }
     
     .flavour .text {
